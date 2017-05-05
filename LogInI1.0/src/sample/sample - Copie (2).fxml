@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="root2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="600.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+     <MenuBar prefHeight="25.0" prefWidth="872.0">
+       <menus>
+         <Menu mnemonicParsing="false" text="Fichier">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Nouveau">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+             <SeparatorMenuItem />
+             <MenuItem fx:id="load" mnemonicParsing="true" styleClass="ouvrirItem" text="Ouvrir ...">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/ouvrir2.png" />
+                     </ImageView>
+                 </graphic>
+               <accelerator>
+                   <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+             <MenuItem mnemonicParsing="false" text="Ouvrir URL ..." />
+             <SeparatorMenuItem />
+               <MenuItem mnemonicParsing="false" text="Enregistrer">
+                   <graphic>
+                       <ImageView>
+                           <Image url="@icons/save2.png" />
+                       </ImageView>
+                   </graphic><accelerator>
+                   <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+             <MenuItem fx:id="save" mnemonicParsing="false" text="Enregistrer sous" />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Nouvelle fenêtre">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/new.png" />
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <MenuItem fx:id="fermer" mnemonicParsing="false" text="Fermer">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/fermer2.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+           </items>
+
+         </Menu>
+         <Menu mnemonicParsing="false" text="Edition">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Annuler">
+                 <graphic>
+                     <ImageView fitHeight="15" fitWidth="15">
+                         <Image url="@icons/annuler.png" />
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <MenuItem mnemonicParsing="false" text="Undo">
+                 <graphic>
+                     <ImageView fitHeight="20" fitWidth="20">
+                         <Image url="@icons/undo.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem mnemonicParsing="false" text="Redo">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/redo.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Ouvrir le navigateur des composants">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/browser.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="DOWN" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem mnemonicParsing="false" text="Nommer le schéma">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/rename.png" />
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="false" text="Rotation objet">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="90°">
+                     <graphic>
+                         <ImageView>
+                             <Image url="@icons/rotation-90.png" />
+                         </ImageView>
+                     </graphic>
+                     <accelerator>
+                         <KeyCodeCombination alt="DOWN" code="RIGHT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                 </MenuItem>
+                 <MenuItem mnemonicParsing="false" text="-90°">
+                     <graphic>
+                         <ImageView>
+                             <Image url="@icons/rotation+90.png" />
+                         </ImageView>
+                     </graphic>
+                     <accelerator>
+                         <KeyCodeCombination alt="DOWN" code="LEFT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                 </MenuItem>
+               </items>
+             </Menu>
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Supprimer objet">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/delete.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="ANY" code="DELETE" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem mnemonicParsing="false" onAction="#supprimerTout" text="Supprimer tout">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/deleteAll.png" />
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="false" text="Affichage">
+           <items>
+               <MenuItem fx:id="zoomPlus" mnemonicParsing="false" text="Zoom avant"><graphic>
+                   <ImageView fitHeight="18" fitWidth="18">
+                       <Image url="@icons/zoomIn.png" />
+                   </ImageView>
+               </graphic></MenuItem>
+             <MenuItem fx:id="zoomMiness" mnemonicParsing="false" text="Zoom arrière">
+                 <graphic>
+                     <ImageView fitHeight="18" fitWidth="18">
+                         <Image url="@icons/zoomOut.png" />
+                     </ImageView>
+                 </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="MINUS" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="false" text="Espace de travaille">
+                 <Menu mnemonicParsing="false" text="Grille">
+                     <CheckMenuItem fx:id="grilleContinue" mnemonicParsing="false" text="Grille continue" />
+                     <CheckMenuItem fx:id="grillePointilles1" mnemonicParsing="false" text="Grille en pointillés longue" />
+                     <CheckMenuItem fx:id="grillePointilles2" mnemonicParsing="false" text="Grille en pointillés courte" />
+
+                 </Menu>
+             </Menu>
+             <SeparatorMenuItem />
+             <CheckMenuItem fx:id="pleinEcran" mnemonicParsing="false" text="Mode plein écran">
+                 <graphic>
+                     <ImageView fitHeight="32" fitWidth="32">
+                         <Image url="@icons/full.png" />
+                     </ImageView>
+                 </graphic>
+             </CheckMenuItem>
+             <Menu mnemonicParsing="false" text="Mode d'écran (Theme)">
+               <RadioMenuItem mnemonicParsing="false" text="Light (Snow white)" />
+               <RadioMenuItem mnemonicParsing="false" text="Dark (Dracula)" />
+             </Menu>
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="true" text="Classe">
+           <items>
+             <RadioMenuItem text="Classe des instants" />
+             <RadioMenuItem mnemonicParsing="false" text="Classe des types" />
+             <RadioMenuItem mnemonicParsing="false" text="Classe des portes" />
+             <RadioMenuItem mnemonicParsing="false" text="..." />
+           </items>
+         </Menu>
+
+           <Menu mnemonicParsing="true" text="Simulateur">
+               <items>
+                   <MenuItem mnemonicParsing="false" text="Démarrer" />
+                   <MenuItem mnemonicParsing="false" />
+                   <MenuItem />
+                   <MenuItem />
+
+               </items>
+           </Menu>
+
+         <Menu mnemonicParsing="false" text="Signal">
+           <items>
+             <MenuItem fx:id="historyAccelerator" mnemonicParsing="false" text="Ouvrir la gestion des processus">
+                 <graphic>
+                     <ImageView>
+                         <Image url="@icons/registre.png" />
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator></MenuItem>
+           </items>
+         </Menu>
+
+
+       </menus>
+     </MenuBar>
+   </top>
+   <center>
+      <ScrollPane fx:id="fuck" hbarPolicy="ALWAYS" prefHeight="200.0" prefWidth="200.0" styleClass="mylistview" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane id="workSpace" fx:id="workSpace" minHeight="0.0" minWidth="0.0" prefHeight="968.0" prefWidth="1830.0" style="-fx-background-color: #fffa0;">
+               <Label fx:id="position" text="Position : ">
+
+               </Label></AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+   <left>
+       <ScrollPane prefHeight="780.0" prefWidth="224.0">
+           <content>
+      <AnchorPane fx:id="FedAnchor" prefHeight="1056.0" prefWidth="251.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="portImageView" fitHeight="150.0" fitWidth="159.0" layoutX="57.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@OR.png" />
+               </image></ImageView>
+            <Label fx:id="portName" layoutX="72.0" layoutY="387.0" text="OR2" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+            <TextField layoutX="33.0" layoutY="707.0" promptText="Nom de l'instance" />
+            <Label layoutX="65.0" layoutY="641.0" text="Edition">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               </Label>
+            <TextField layoutX="33.0" layoutY="741.0" promptText="Temps de réponse (sec)" />
+             <Label layoutX="45.0" layoutY="432.0" text="Description">
+                 <font>
+                     <Font size="20.0" />
+                 </font>
+             </Label>
+             <Text fx:id="textDescription" layoutX="65.0" layoutY="492.0" text="Description">
+               <font>
+                  <Font size="12.0" />
+               </font>
+/               </Text>
+                  <TreeView fx:id="PortsTree" layoutX="4.0" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+           </content>
+       </ScrollPane>
+   </left>
+</BorderPane>

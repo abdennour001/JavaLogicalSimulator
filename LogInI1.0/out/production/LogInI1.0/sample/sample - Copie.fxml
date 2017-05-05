@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.CheckMenuItem?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+     <MenuBar prefHeight="25.0" prefWidth="872.0">
+       <menus>
+         <Menu mnemonicParsing="false" text="Fichier">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Nouveau" />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Ouvrir ..." />
+             <MenuItem mnemonicParsing="false" text="Ouvrir URL ..." />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Enregistrer" />
+             <MenuItem mnemonicParsing="false" text="Enregistrer sous" />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Nouvelle fenêtre" />
+             <MenuItem mnemonicParsing="false" text="Fermer" />
+           </items>
+
+         </Menu>
+         <Menu mnemonicParsing="false" text="Edition">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Annuler" />
+             <MenuItem mnemonicParsing="false" text="Undo" />
+             <MenuItem mnemonicParsing="false" text="Redo" />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Ouvrir le navigateur des composants" />
+             <MenuItem mnemonicParsing="false" text="Nommer le schéma" />
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="false" text="Rotation objet">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="90°" />
+                 <MenuItem mnemonicParsing="false" text="Miroir objet X" />
+                 <MenuItem mnemonicParsing="false" text="Miroir objet Y" />
+               </items>
+             </Menu>
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="false" text="Supprimer objet" />
+             <MenuItem mnemonicParsing="false" text="Supprimer tout" />
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="false" text="Affichage">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Zoom avant" />
+             <MenuItem mnemonicParsing="false" text="Zoom arrière" />
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="false" text="Espace de travaille">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="..." />
+                  <MenuItem mnemonicParsing="false" text="..." />
+                  <MenuItem mnemonicParsing="false" text="..." />
+                </items>
+             </Menu>
+             <SeparatorMenuItem />
+             <CheckMenuItem mnemonicParsing="false" text="Mode plein écran" />
+             <Menu mnemonicParsing="false" text="Mode d'écran (Theme)">
+                <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Light (Snow white)" />
+                  <RadioMenuItem mnemonicParsing="false" text="Dark (Dracula)" />
+                </items>
+             </Menu>
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="true" text="Classe">
+           <items>
+             <RadioMenuItem text="Classe des instants" />
+             <RadioMenuItem mnemonicParsing="false" text="Classe des types" />
+             <RadioMenuItem mnemonicParsing="false" text="Classe des portes" />
+             <RadioMenuItem mnemonicParsing="false" text="..." />
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="false" text="Signal">
+           <items>
+             <MenuItem mnemonicParsing="false" text="" />
+           </items>
+         </Menu>
+
+
+       </menus>
+     </MenuBar>
+   </top>
+   <center>
+      <ScrollPane prefHeight="285.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="964.0" />
+        </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="86.0" layoutY="164.0" text="Nom" />
+            <Label layoutX="69.0" layoutY="199.0" text="Description" />
+         </children>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="44.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="86.0" layoutY="6.0" text="simulation" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

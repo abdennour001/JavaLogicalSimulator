@@ -1,0 +1,6 @@
+.progress-bar > .bar {
+    -fx-background-color: rgb(35, 176, 80, 1);
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 0.20em;
+}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="root2" fx:id="historyVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="681.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HistoryController">
+   <children>
+            <TableView fx:id="Table" editable="true" layoutY="48.0" prefHeight="372.0" prefWidth="681.0">
+              <columns>
+                <TableColumn fx:id="Temps" prefWidth="75.0" text="Temps" />
+                <TableColumn fx:id="Action" prefWidth="410.0" text="Action" />
+                  <TableColumn fx:id="Statut" prefWidth="139.0" text="Statut" />
+              </columns>
+            </TableView>
+
+       <Label fx:id="date" layoutX="401.0" layoutY="439.0" text="Date : ">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font></Label>
+      <Button fx:id="Vider" layoutX="14.0" layoutY="435.0" mnemonicParsing="false" text="Vider l'Historique" />
+      <Label layoutX="8.0" layoutY="14.0" text="Histoire Des Commandes">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font></Label>
+   </children>
+</Pane>

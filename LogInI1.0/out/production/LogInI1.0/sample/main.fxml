@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane id="root2" fx:id="root2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="600.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <SplitPane fx:id="split1" dividerPositions="1" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+            <items>
+                <SplitPane fx:id="split2" dividerPositions="0">
+                    <items>
+                        <TabPane fx:id="tabProject" minHeight="30" minWidth="30" prefHeight="1000" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Projets">
+                                    <graphic>
+                                        <ImageView rotate="90">
+                                            <image>
+                                                <Image url="@icons/tree.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <content>
+                              <VBox  prefWidth="100.0">
+                                 <children>
+                                    <AnchorPane prefHeight="14.0" prefWidth="347.0">
+                                        <ImageView fx:id="hide" AnchorPane.leftAnchor="5.0">
+                                            <Image url="@icons/project.png">
+                                            </Image>
+                                        </ImageView>
+                                        <Label AnchorPane.topAnchor="1.5" AnchorPane.leftAnchor="30" text="Projet"/>
+                                        <ImageView fx:id="back" AnchorPane.rightAnchor="2.0">
+                                            <Image url="@icons/back.png">
+                                            </Image>
+                                        </ImageView>
+                                    </AnchorPane>
+                                    <TreeView fx:id="projectTree" minHeight="900" prefWidth="347.0" />
+                                 </children>
+                              </VBox>
+                           </content>
+                                </Tab>
+                                <Tab text="Composants">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/comp.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <content>
+
+                                        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+                                            <panes>
+                                                <TitledPane animated="false" text="Porte">
+                                                    <content>
+                                                        <GridPane fx:id="grid" >
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                                                   prefWidth="50.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                                                   prefWidth="50.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                                                   prefWidth="50.0"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints prefHeight="49.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="21.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <ImageView fx:id="et2" fitHeight="42.0" fitWidth="75.0"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="2"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@ET2.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="et3" fitHeight="41.0" fitWidth="75.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="2"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@ET3.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="et4" fitHeight="40.0" fitWidth="90.0"
+                                                                           GridPane.columnIndex="2"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="2"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@ET4.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="ou" fitHeight="28.0" fitWidth="83.0"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="4"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@OU.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="ou3" fitHeight="40.0" fitWidth="78.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="4"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@OU3.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="ou4" fitHeight="38.0" fitWidth="75.0"
+                                                                           GridPane.columnIndex="2"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="4"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@OU4.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nand2" fitHeight="30.0"
+                                                                           fitWidth="74.0" GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="6"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NAND2.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nand3" fitHeight="32.0"
+                                                                           fitWidth="81.0" GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="6"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NAND3.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nand4" fitHeight="35.0"
+                                                                           fitWidth="75.0" GridPane.columnIndex="2"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="6"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NAND4.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nor" fitHeight="38.0" fitWidth="90.0"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="8"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NOR.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nor3" fitHeight="37.0" fitWidth="90.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="8"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NOR3.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="nor4" fitHeight="38.0" fitWidth="90.0"
+                                                                           GridPane.columnIndex="2"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="8"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@NOR4.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="xor" fitHeight="38.0" fitWidth="90.0"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="10"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@XOR.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="tristate" GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="10"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@tristate.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="inv" fitHeight="36.0" fitWidth="90.0"
+                                                                           GridPane.columnIndex="2"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@INV.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="led" fitHeight="32.0" fitWidth="76.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@LED.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <ImageView fx:id="Switch" fitHeight="44.0"
+                                                                           fitWidth="70.0" GridPane.halignment="CENTER"
+                                                                           GridPane.valignment="CENTER">
+                                                                    <image>
+                                                                        <Image url="@switch.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label text="Switch" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="1"
+                                                                       GridPane.valignment="CENTER">
+                                                                    <GridPane.margin>
+                                                                        <Insets right="-20.0"/>
+                                                                    </GridPane.margin>
+                                                                </Label>
+                                                                <Label text="Led" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="1"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="Inv" GridPane.columnIndex="2"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="1"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="ET 2" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="3"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="ET 3" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="3"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="ET 4" GridPane.columnIndex="2"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="3"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="OU 2" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="5"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="OU 3" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="5"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="OU 4" GridPane.columnIndex="2"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="5"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NET 2" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="7"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NET 3" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="7"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NET 4" GridPane.columnIndex="2"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="7"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NOU 2" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="9"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NOU 3" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="9"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="NOU 4" GridPane.columnIndex="2"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="9"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="XOR" GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="11"
+                                                                       GridPane.valignment="CENTER"/>
+                                                                <Label text="Tristate" GridPane.columnIndex="1"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.rowIndex="11"
+                                                                       GridPane.valignment="CENTER"/>
+                                                            </children>
+                                                        </GridPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" text="Combinatoire 1">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                                    prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane layoutY="-6.0" prefHeight="324.0"
+                                                                          prefWidth="598.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           maxWidth="309.0"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="300.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           maxWidth="364.0"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="298.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints maxHeight="175.0"
+                                                                                        minHeight="0.0"
+                                                                                        prefHeight="59.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="175.0"
+                                                                                        minHeight="8.0"
+                                                                                        prefHeight="22.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="187.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="58.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="187.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="21.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="175.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="49.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="187.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="22.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="187.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="47.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="187.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="51.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <ImageView fx:id="dec2_4" fitHeight="54.0" fitWidth="66.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@dec2_4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="dec3_8" fitHeight="48.0" fitWidth="76.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Ports/dec3_8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="demux4" fitHeight="57.0" fitWidth="70.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Ports/demux4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="demux8" fitHeight="56.0" fitWidth="63.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Ports/demux8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="mux4" fitHeight="54.0" fitWidth="77.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Ports/mux4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="mux8" fitHeight="54.0" fitWidth="70.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Ports/mux8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="aff2" fitHeight="45.0" fitWidth="55.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@aff2.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label text="Aff 7 seg"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Dec 2_4" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Mux 4_1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Mux 8_1" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Demux 4_1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Demux 8_1" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label prefHeight="17.0" prefWidth="55.0"
+                                                                               text="Dec 3_8"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="TOP"/>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" text="Combinatoire 2">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                                    prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane prefHeight="294.0" prefWidth="593.0">
+                                                                    <children>
+                                                                        <ImageView fx:id="ADDC1" fitHeight="54.0" fitWidth="79.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@ADDC1.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="ADDC2" fitHeight="66.0" fitWidth="73.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@ADDC2.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="ADDC4" fitHeight="71.0" fitWidth="82.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@ADDC4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="demiADD" fitHeight="54.0" fitWidth="71.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@demiADD.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="Cmp4" fitHeight="56.0" fitWidth="73.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Cmp4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="Encod4_2" fitHeight="59.0" fitWidth="71.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Encod4_2.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="Encod8_3" fitHeight="63.0" fitWidth="77.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@Encod8_3.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="demiSOUS" fitHeight="58.0" fitWidth="67.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@demiADD.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label text="ADDC1" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="ADDC1" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="ADDC4" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Encod 4_2" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Encod 8_3"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="CMP4" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Demi_Add"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Demi_Sous" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                    </children>
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           maxWidth="442.0"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="258.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           maxWidth="308.0"
+                                                                                           minWidth="0.0"
+                                                                                           prefWidth="255.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints maxHeight="181.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="146.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="181.0"
+                                                                                        minHeight="20.0"
+                                                                                        prefHeight="100.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="148.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="100.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="148.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="100.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="148.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="162.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="100.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" text="Sequentiel">
+                                                    <content>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane layoutX="15.0" layoutY="19.0"
+                                                                          prefHeight="262.0" prefWidth="591.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints prefHeight="55.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="22.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="60.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="26.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="66.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="26.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="59.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="27.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="54.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints prefHeight="17.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <ImageView fx:id="d" fitHeight="34.0" fitWidth="57.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@DA.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="H" fitHeight="46.0" fitWidth="68.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@HORLOGE.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="JK" fitHeight="40.0" fitWidth="62.0"
+                                                                                   GridPane.columnIndex="2"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@JK.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="JKasyn" fitHeight="51.0" fitWidth="75.0"
+                                                                                   GridPane.columnIndex="2"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@JKasyn.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="REG4" fitHeight="41.0" fitWidth="53.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@REG4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="REG8" fitHeight="47.0" fitWidth="56.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@REG8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="RS" fitHeight="44.0" fitWidth="63.0"
+                                                                                   GridPane.columnIndex="2"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="2"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@RS.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="RST" fitHeight="51.0" fitWidth="80.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="8"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@RST.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="T" fitHeight="46.0" fitWidth="69.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@T.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="dlatch" fitHeight="47.0" fitWidth="66.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@DA.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="cop4" fitHeight="49.0" fitWidth="75.0"
+                                                                                   GridPane.columnIndex="2"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="4"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@COP4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="cop8" fitHeight="47.0" fitWidth="78.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="8"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@COP8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="regd4" fitHeight="44.0" fitWidth="79.0"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@REGD4.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <ImageView fx:id="regd8" fitHeight="45.0" fitWidth="80.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.halignment="CENTER"
+                                                                                   GridPane.rowIndex="6"
+                                                                                   GridPane.valignment="CENTER">
+                                                                            <image>
+                                                                                <Image url="@REGD8.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label text="D" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Horloge" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Jk" GridPane.columnIndex="2"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="1"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="REG 4" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="REG 8" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="RS" GridPane.columnIndex="2"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="3"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="T" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="D_latch" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="CO 4" GridPane.columnIndex="2"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="5"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Reg à dec 4"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Reg à dec 8"
+                                                                               GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="Jk_assy" GridPane.columnIndex="2"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="7"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="CO 8" GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="9"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                        <Label text="RST" GridPane.columnIndex="1"
+                                                                               GridPane.halignment="CENTER"
+                                                                               GridPane.rowIndex="9"
+                                                                               GridPane.valignment="CENTER"/>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                            </panes>
+                                        </Accordion>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                        <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS">
+                            <tabs>
+                                <Tab text="Schéma1">
+                                    <content>
+                                        <ScrollPane hbarPolicy="ALWAYS" prefHeight="200.0" prefWidth="200.0" styleClass="mylistview" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                                            <content>
+                                                <AnchorPane id="workSpace" minHeight="0.0" minWidth="0.0" prefHeight="968.0" prefWidth="1830.0" style="-fx-background-color: #fffa0;">
+                                                    </AnchorPane>
+                                            </content>
+                                        </ScrollPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </items>
+                </SplitPane>
+                <TabPane fx:id="tabHistorique" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="statut" text="Statut">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/stat.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="t_statut" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+                                                <TableColumn fx:id="t_erreur" prefWidth="350.0" text="Erreur" />
+                                                <TableColumn fx:id="solution" prefWidth="200.0" text="Solution " />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Historique">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/his.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <content>
+                                        <TableView fx:id="Table" editable="true" layoutY="48.0" prefHeight="372.0" prefWidth="681.0">
+                                            <columns>
+                                                <TableColumn fx:id="Temps" prefWidth="75.0" text="Temps" />
+                                                <TableColumn fx:id="Action" prefWidth="410.0" text="Action" />
+                                                <TableColumn fx:id="Statut" prefWidth="139.0" text="Statut" />
+                                            </columns>
+                                        </TableView>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </items>
+        </SplitPane>
+    </center>
+    <top>
+        <VBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <MenuBar prefHeight="26.0" prefWidth="600.0">
+                    <menus>
+                        <Menu fx:id="f1" mnemonicParsing="true" text="_Fichier">
+                            <items>
+                                <MenuItem fx:id="f11" mnemonicParsing="true" text="_Nouveau">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/creer.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <SeparatorMenuItem />
+                                <MenuItem fx:id="load" mnemonicParsing="true" styleClass="ouvrirItem" text="_Ouvrir ...">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/ouvrir2.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <SeparatorMenuItem />
+                                <MenuItem fx:id="save" mnemonicParsing="true" text="Enre_gistrer">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/save2.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic><accelerator>
+                                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                </accelerator></MenuItem>
+                                <SeparatorMenuItem />
+
+                                <MenuItem fx:id="fermer" mnemonicParsing="true" text="_Fermer">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/fermer2.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                            </items>
+
+                        </Menu>
+                        <Menu fx:id="f2" mnemonicParsing="true" text="_Edition">
+                            <items>
+                                <MenuItem fx:id="undo" mnemonicParsing="true" text="_Undo">
+                                    <graphic>
+                                        <ImageView fitHeight="20" fitWidth="20">
+                                            <image>
+                                                <Image url="@icons/undo.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem fx:id="redo" mnemonicParsing="true" text="_Redo">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/redo.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <SeparatorMenuItem />
+                                <MenuItem fx:id="f25" mnemonicParsing="true" text="_Ouvrir le navigateur des composants">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/browser.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem fx:id="nommerSchema" mnemonicParsing="true" text="_Nommer le _Schéma">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/rename.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </MenuItem>
+                                <SeparatorMenuItem />
+                                <MenuItem fx:id="f28" mnemonicParsing="true" onAction="#supprimerTout" text="Supprimer _Tout">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/deleteAll.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+
+                        <Menu fx:id="f3" mnemonicParsing="true" text="_Affichage">
+                            <items>
+
+                                <Menu fx:id="f31" mnemonicParsing="true" text="_Espace de travaille">
+                                    <items>
+                                        <Menu mnemonicParsing="true" text="_Grille">
+                                            <items>
+                                                <CheckMenuItem fx:id="grilleContinue" mnemonicParsing="true" text="Grille _continue" />
+                                                <CheckMenuItem fx:id="grillePointilles1" mnemonicParsing="true" text="Grille en _pointillés _longue" />
+                                                <CheckMenuItem fx:id="grillePointilles2" mnemonicParsing="true" text="Grille en _pointillés _courte" />
+                                            </items>
+
+                                        </Menu>
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem />
+                                <CheckMenuItem fx:id="pleinEcran" mnemonicParsing="true" text="_Mode plein écran">
+                                    <graphic>
+                                        <ImageView fitHeight="32" fitWidth="32">
+                                            <image>
+                                                <Image url="@icons/full.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </CheckMenuItem>
+                                <Menu fx:id="f32" mnemonicParsing="true" text="Mode d'écran (_Theme)">
+                                    <items>
+                                        <RadioMenuItem fx:id="f33" mnemonicParsing="true" text="_Light (Snow white)" />
+                                        <RadioMenuItem fx:id="f34" mnemonicParsing="true" text="_Dark (Dracula)" />
+                                    </items>
+                                </Menu>
+                            </items>
+                        </Menu>
+
+                        <Menu fx:id="f4" mnemonicParsing="true" text="Clas_se">
+                            <items>
+                                <RadioMenuItem fx:id="f41" mnemonicParsing="true" selected="false" text="_Neon portes">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/forchat.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </RadioMenuItem>
+                                <RadioMenuItem fx:id="f43" mnemonicParsing="true" text="Classe des _Types">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/abc.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </RadioMenuItem>
+                                <RadioMenuItem fx:id="f44" mnemonicParsing="true" text="Classe des _Portes">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/good.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </RadioMenuItem>
+                            </items>
+                        </Menu>
+
+                        <Menu fx:id="f5" mnemonicParsing="true" text="Si_mulateur">
+                            <items>
+                                <MenuItem fx:id="demarrer" mnemonicParsing="true" text="_Démarrer...">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/demarrer.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <MenuItem fx:id="arreter" mnemonicParsing="true" text="_Arrêter">
+                                    <graphic>
+                                        <ImageView fitHeight="14" fitWidth="14">
+                                            <image>
+                                                <Image url="@icons/arr.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <MenuItem fx:id="pause" mnemonicParsing="true" text="P_ause">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/pause.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <MenuItem fx:id="resumer" mnemonicParsing="true" text="Resu_mer">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/resumer.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <MenuItem fx:id="redemarrer" mnemonicParsing="true" text="_Redémarrer">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/replay.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="Q" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                                <SeparatorMenuItem />
+                                <MenuItem fx:id="configuration" mnemonicParsing="true" text="Confi_guration">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/config.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                            </items>
+                        </Menu>
+
+                        <Menu fx:id="f6" mnemonicParsing="true" text="Si_gnal">
+                            <items>
+                                <MenuItem fx:id="historyAccelerator" mnemonicParsing="true" text="_Ouvrir la gestion des processus">
+                                    <graphic>
+                                        <ImageView>
+                                            <image>
+                                                <Image url="@icons/registre.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator></MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="true" text="_Aide">
+                            <items>
+                                <MenuItem fx:id="about" onAction="#about" mnemonicParsing="true" text="_A propos">
+
+                                </MenuItem>
+                            </items>
+                        </Menu>
+
+                    </menus>
+                </MenuBar>
+                <Separator id="separator1" prefWidth="200.0" />
+                <AnchorPane id="buttonBar" fx:id="buttonBar" prefHeight="15.0" prefWidth="600.0">
+                    <children>
+
+                        <Separator layoutX="137.0" layoutY="1.0" orientation="VERTICAL" prefHeight="24.0" prefWidth="2.0" styleClass="verticalSeparator" />
+
+                        <Separator layoutX="290.0" layoutY="1.0" orientation="VERTICAL" prefHeight="24.0" prefWidth="2.0" styleClass="verticalSeparator" AnchorPane.rightAnchor="310" />
+
+                        <ChoiceBox fx:id="utiliser" layoutY="1.0" prefHeight="25.0" prefWidth="120.0" AnchorPane.rightAnchor="80.0" />
+                        <ChoiceBox fx:id="langue" layoutX="545.0" layoutY="1.0" prefHeight="25.0" prefWidth="55.0" AnchorPane.rightAnchor="2.0" />
+                        <Button fx:id="chrono" disable="true" id="chrono" alignment="BASELINE_CENTER" layoutY="0.4" AnchorPane.rightAnchor="220.0">
+                          <graphic>
+                              <ImageView>
+                                  <image>
+                                      <Image url="@icons/crono.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                        </Button>
+                        <Button fx:id="arb" layoutY="-1" layoutX="830.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Arboresence de description " />
+
+                        <Button fx:id="start" id="start" alignment="BASELINE_CENTER" layoutY="0.6" AnchorPane.RightAnchor="280.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/demarrer.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="stop" disable="true" id="stop" alignment="BASELINE_CENTER" layoutY="0.6" AnchorPane.RightAnchor="250.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/resumer2.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="saveP" disable="false" id="saveP" alignment="BASELINE_CENTER" layoutY="-1.0" AnchorPane.LeftAnchor="98.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/save3.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="openModule" disable="false" id="openModule" alignment="BASELINE_CENTER" layoutY="-1" AnchorPane.LeftAnchor="68.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/project3.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="new2" disable="false" id="new" alignment="BASELINE_CENTER" layoutY="-1" AnchorPane.LeftAnchor="5.0">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/file.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="open" disable="false" id="open" alignment="BASELINE_CENTER" layoutY="0.8" AnchorPane.LeftAnchor="36.5">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@icons/project2.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <AnchorPane>
+            <ImageView AnchorPane.leftAnchor="1.0">
+                <Image url="@icons/pos.png">
+                </Image>
+            </ImageView>
+            <Label fx:id="position" text="Position : " AnchorPane.leftAnchor="30.0">
+
+            </Label>
+            <Label fx:id="simul" text="Simulation" visible="false">
+            </Label>
+            <Label fx:id="charg" text="" visible="false">
+            </Label>
+            <ImageView fx:id="lock" layoutX="510.0" AnchorPane.rightAnchor="5.0">
+                <Image url="@icons/lock1.png">
+                </Image>
+            </ImageView>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

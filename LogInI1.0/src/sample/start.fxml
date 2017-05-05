@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="681.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartController">
+    <children>
+        <ProgressBar fx:id="bar" layoutX="100.0" layoutY="294.0" opacity="0.72" prefHeight="2.0" prefWidth="650.0" stylesheets="@prog.css" />
+    </children>
+   <effect>
+      <Shadow />
+   </effect>
+</AnchorPane>

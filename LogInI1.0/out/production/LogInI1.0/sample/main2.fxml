@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="root2" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+   <VBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+
+            <MenuBar prefHeight="26.0" prefWidth="600.0">
+       <menus>
+         <Menu mnemonicParsing="true" text="_Fichier">
+           <items>
+             <MenuItem mnemonicParsing="true" text="_Nouveau">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/creer.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+             <SeparatorMenuItem />
+             <MenuItem fx:id="load" mnemonicParsing="true" styleClass="ouvrirItem" text="_Ouvrir ...">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/ouvrir2.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+               <accelerator>
+                   <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+             <MenuItem mnemonicParsing="true" text="Ouvrir _URL ..." />
+             <SeparatorMenuItem />
+               <MenuItem mnemonicParsing="true" text="Enre_gistrer">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/save2.png" />
+                          </image>
+                       </ImageView>
+                   </graphic><accelerator>
+                   <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+             <MenuItem fx:id="save" mnemonicParsing="true" text="Enregistrer _sous" />
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="true" text="_Nouvelle fenêtre">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/new.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <MenuItem fx:id="fermer" mnemonicParsing="true" text="_Fermer">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/fermer2.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+           </items>
+
+         </Menu>
+         <Menu mnemonicParsing="true" text="_Edition">
+           <items>
+             <MenuItem mnemonicParsing="true" text="_Annuler">
+                 <graphic>
+                     <ImageView fitHeight="15" fitWidth="15">
+                        <image>
+                            <Image url="@icons/annuler.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <MenuItem fx:id="undo" mnemonicParsing="true" text="_Undo">
+                 <graphic>
+                     <ImageView fitHeight="20" fitWidth="20">
+                        <image>
+                            <Image url="@icons/undo.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem fx:id="redo"  mnemonicParsing="true" text="_Redo">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/redo.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+               <SeparatorMenuItem />
+               <MenuItem mnemonicParsing="true" text="_Couper">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/cut.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+                   <accelerator>
+                       <KeyCodeCombination alt="ANY" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                   </accelerator>
+               </MenuItem>
+               <MenuItem mnemonicParsing="true" text="_Copier">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/copy.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+                   <accelerator>
+                       <KeyCodeCombination alt="ANY" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                   </accelerator>
+               </MenuItem>
+               <MenuItem mnemonicParsing="true" text="_Coller">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/paste.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+                   <accelerator>
+                       <KeyCodeCombination alt="ANY" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                   </accelerator>
+               </MenuItem>
+               <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="true" text="_Ouvrir le navigateur des composants">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/browser.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="DOWN" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem fx:id="nommerSchema" mnemonicParsing="true" text="_Nommer le _Schéma">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/rename.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="true" text="_Rotation objet">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/rota.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+               <items>
+                 <MenuItem mnemonicParsing="true" text="90°">
+                     <graphic>
+                         <ImageView>
+                            <image>
+                                <Image url="@icons/rotation-90.png" />
+                            </image>
+                         </ImageView>
+                     </graphic>
+                     <accelerator>
+                         <KeyCodeCombination alt="DOWN" code="RIGHT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                 </MenuItem>
+                 <MenuItem mnemonicParsing="true" text="-90°">
+                     <graphic>
+                         <ImageView>
+                            <image>
+                                <Image url="@icons/rotation+90.png" />
+                            </image>
+                         </ImageView>
+                     </graphic>
+                     <accelerator>
+                         <KeyCodeCombination alt="DOWN" code="LEFT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                 </MenuItem>
+               </items>
+             </Menu>
+             <SeparatorMenuItem />
+             <MenuItem mnemonicParsing="true" text="_Supprimer objet">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/delete.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="ANY" code="DELETE" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator>
+             </MenuItem>
+             <MenuItem mnemonicParsing="true" onAction="#supprimerTout" text="Supprimer _Tout">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/deleteAll.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+             </MenuItem>
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="true" text="_Affichage">
+           <items>
+               <MenuItem fx:id="zoomPlus" mnemonicParsing="true" text="_Zoom avant"><graphic>
+                   <ImageView fitHeight="18" fitWidth="18">
+                      <image>
+                          <Image url="@icons/zoomIn.png" />
+                      </image>
+                   </ImageView>
+               </graphic></MenuItem>
+             <MenuItem fx:id="zoomMiness" mnemonicParsing="true" text="_Zoom arrière">
+                 <graphic>
+                     <ImageView fitHeight="18" fitWidth="18">
+                        <image>
+                            <Image url="@icons/zoomOut.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="MINUS" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+             <SeparatorMenuItem />
+             <Menu mnemonicParsing="true" text="_Espace de travaille">
+                <items>
+                    <Menu mnemonicParsing="true" text="_Grille">
+                       <items>
+                           <CheckMenuItem fx:id="grilleContinue" mnemonicParsing="true" text="Grille _continue" />
+                           <CheckMenuItem fx:id="grillePointilles1" mnemonicParsing="true" text="Grille en _pointillés _longue" />
+                           <CheckMenuItem fx:id="grillePointilles2" mnemonicParsing="true" text="Grille en _pointillés _courte" />
+                       </items>
+
+                    </Menu>
+                </items>
+             </Menu>
+             <SeparatorMenuItem />
+             <CheckMenuItem fx:id="pleinEcran" mnemonicParsing="true" text="_Mode plein écran">
+                 <graphic>
+                     <ImageView fitHeight="32" fitWidth="32">
+                        <image>
+                            <Image url="@icons/full.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+             </CheckMenuItem>
+             <Menu mnemonicParsing="true" text="Mode d'écran (_Theme)">
+                <items>
+                  <RadioMenuItem mnemonicParsing="true" text="_Light (Snow white)" />
+                  <RadioMenuItem mnemonicParsing="true" text="_Dark (Dracula)" />
+                </items>
+             </Menu>
+           </items>
+         </Menu>
+
+         <Menu mnemonicParsing="true" text="Clas_se">
+           <items>
+               <RadioMenuItem mnemonicParsing="true" selected="true" text="_Neon portes">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/forchat.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+               </RadioMenuItem>
+               <RadioMenuItem mnemonicParsing="true" selected="true" text="Classe des _Instants">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/glass.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+               </RadioMenuItem>
+               <RadioMenuItem mnemonicParsing="true" text="Classe des _Types">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/abc.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+               </RadioMenuItem>
+               <RadioMenuItem mnemonicParsing="true" text="Classe des _Portes">
+                   <graphic>
+                       <ImageView>
+                          <image>
+                              <Image url="@icons/good.png" />
+                          </image>
+                       </ImageView>
+                   </graphic>
+               </RadioMenuItem>
+           </items>
+         </Menu>
+
+           <Menu mnemonicParsing="true" text="Si_mulateur">
+               <items>
+                   <MenuItem fx:id="demarrer" mnemonicParsing="true" text="_Démarrer...">
+                       <graphic>
+                           <ImageView>
+                              <image>
+                                  <Image url="@icons/demarrer.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                   <MenuItem fx:id="arreter" mnemonicParsing="true" text="_Arrêter">
+                       <graphic>
+                           <ImageView fitHeight="14" fitWidth="14">
+                              <image>
+                                  <Image url="@icons/arr.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                   <MenuItem fx:id="pause" mnemonicParsing="true" text="P_ause">
+                       <graphic>
+                           <ImageView>
+                              <image>
+                                  <Image url="@icons/pause.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                   <MenuItem fx:id="resumer" mnemonicParsing="true" text="Resu_mer">
+                       <graphic>
+                           <ImageView>
+                              <image>
+                                  <Image url="@icons/resumer.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                   <MenuItem fx:id="redemarrer" mnemonicParsing="true" text="_Redémarrer">
+                       <graphic>
+                           <ImageView>
+                              <image>
+                                  <Image url="@icons/rede.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                       <accelerator>
+                           <KeyCodeCombination alt="DOWN" code="Q" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                       </accelerator></MenuItem>
+                   <SeparatorMenuItem />
+                   <MenuItem mnemonicParsing="true" text="Confi_guration">
+                       <graphic>
+                           <ImageView>
+                              <image>
+                                  <Image url="@icons/config.png" />
+                              </image>
+                           </ImageView>
+                       </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+               </items>
+           </Menu>
+
+         <Menu mnemonicParsing="true" text="Si_gnal">
+           <items>
+             <MenuItem fx:id="historyAccelerator" mnemonicParsing="true" text="_Ouvrir la gestion des processus">
+                 <graphic>
+                     <ImageView>
+                        <image>
+                            <Image url="@icons/registre.png" />
+                        </image>
+                     </ImageView>
+                 </graphic>
+                 <accelerator>
+                     <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                 </accelerator></MenuItem>
+           </items>
+         </Menu>
+
+
+       </menus>
+     </MenuBar>
+            <Separator prefWidth="200.0" />
+            <AnchorPane id="buttonBar" prefHeight="17.0" prefWidth="600.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="0.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                    <graphic>
+                        <ImageView>
+                            <image>
+                                <Image url="@icons/demarrer.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                  </Button>
+                  <Button layoutX="43.0" layoutY="0.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="@icons/arr2.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                   <Button layoutX="71.0" layoutY="0.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0"><graphic>
+                       <ImageView>
+                           <image>
+                               <Image url="@icons/pause.png" />
+                           </image>
+                       </ImageView>
+                   </graphic>
+                   </Button>
+                   <Button layoutX="100.0" layoutY="0.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView>
+                               <image>
+                                   <Image url="@icons/resumer.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Separator layoutX="137.0" layoutY="1.0" orientation="VERTICAL" prefHeight="24.0" prefWidth="2.0" />
+                   <Button layoutX="143.0" layoutY="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView fitHeight="17" fitWidth="17">
+                               <image>
+                                   <Image url="@icons/redo.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button layoutX="168.0" layoutY="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView fitHeight="17" fitWidth="17">
+                               <image>
+                                   <Image url="@icons/undo.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button layoutX="200.0" layoutY="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView fitHeight="16" fitWidth="16">
+                               <image>
+                                   <Image url="@icons/copy.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button layoutX="225.0" layoutY="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView fitHeight="17" fitWidth="17">
+                               <image>
+                                   <Image url="@icons/paste.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button layoutX="250.0" layoutY="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0">
+                       <graphic>
+                           <ImageView fitHeight="17" fitWidth="17">
+                               <image>
+                                   <Image url="@icons/cut.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Separator layoutX="290.0" layoutY="1.0" orientation="VERTICAL" prefHeight="24.0" prefWidth="2.0" />
+                   <ChoiceBox fx:id="langue" layoutX="545.0" layoutY="1.0" prefHeight="25.0" prefWidth="55.0" AnchorPane.rightAnchor="2.0" />
+                   <Button fx:id="chrono" layoutX="292.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Chro" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </top>
+   <right>
+   
+   </right>
+   <bottom>
+     
+   </bottom>
+   <center>
+
+   </center>
+</BorderPane>

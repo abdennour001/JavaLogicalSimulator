@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="root2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="348.0" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSimulate">
+   <children>
+      <Slider fx:id="sliderSimulator" layoutX="124.0" layoutY="35.0" prefHeight="14.0" prefWidth="210.0" />
+      <Label layoutX="14.0" layoutY="34.0" text="Vitesse (ms)" />
+      <Label layoutX="124.0" layoutY="14.0" text="RAPIDE" />
+      <Label layoutX="306.0" layoutY="14.0" text="LENTE" />
+   </children>
+</AnchorPane>
